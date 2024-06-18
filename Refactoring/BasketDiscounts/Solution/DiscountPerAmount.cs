@@ -11,7 +11,12 @@ public class DiscountPerAmount(double minimumAmount, double maximumAmount, int m
 	public int MaximumQuantity { get; } = maximumQuantity;
 	public double Discount { get; } = discount;
 
-	public bool Apply(Basket basket)
+	public void Apply(Basket basket)
+	{
+		basket.Subtract(basket.Amount * Discount);
+	}
+
+	public bool ShoulBeApplied(Basket basket)
 	{
 		int qtyItens = basket.QtyOfItems();
 		double amount = basket.Amount;
@@ -19,12 +24,6 @@ public class DiscountPerAmount(double minimumAmount, double maximumAmount, int m
 		bool withinItensLimit = qtyItens >= MinimumQuantity && qtyItens <= MaximumQuantity;
 		bool withinAmountLimit = amount >= MinimumAmount && amount <= MaximumAmount;
 
-		if (withinItensLimit && withinAmountLimit)
-		{
-			basket.Subtract(basket.Amount * Discount);
-			return true;
-		}
-
-		return false;
+		return withinItensLimit && withinAmountLimit;
 	}
 }

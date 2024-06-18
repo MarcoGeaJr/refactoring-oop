@@ -4,5 +4,6 @@ namespace Refactoring.BasketDiscounts.Solution;
 
 public interface IDiscountStrategy
 {
-	bool Apply(Basket basket);
+	bool ShoulBeApplied(Basket basket);
+	void Apply(Basket basket);
 }

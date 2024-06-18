@@ -7,15 +7,13 @@ public class DiscountPerProduct(List<string> products, double discount) : IDisco
 	public IReadOnlyList<string> Products = products;
 	public double Discount { get; } = discount;
 
-	public bool Apply(Basket basket)
+	public void Apply(Basket basket)
 	{
-		bool allProductsAreInTheBasket = Products.All(p => basket.Has(p));
-		if (allProductsAreInTheBasket)
-		{
-			basket.Subtract(basket.Amount * Discount);
-			return true;
-		}
+		basket.Subtract(basket.Amount * Discount);
+	}
 
-		return false;
+	public bool ShoulBeApplied(Basket basket)
+	{
+		return Products.All(p => basket.Has(p));
 	}
 }
