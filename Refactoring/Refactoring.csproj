@@ -8,6 +8,8 @@
 
   <ItemGroup>
     <None Remove="BasketDiscounts\Solution\DiscountApplier.cs~RF1e851039.TMP" />
+    <None Remove="BasketDiscounts\Solution\DiscountPerProduct.cs~RF1ef3c70f.TMP" />
+    <None Remove="BasketDiscounts\Solution\DiscountPerProduct.cs~RF1ef73fcb.TMP" />
   </ItemGroup>
 
 </Project>

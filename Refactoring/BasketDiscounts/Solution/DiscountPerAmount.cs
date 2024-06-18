@@ -2,25 +2,26 @@
 
 namespace Refactoring.BasketDiscounts.Solution;
 
-public class DiscountPerAmount : IDiscountStrategy
+public class DiscountPerAmount(double minimumAmount, double maximumAmount, int minimumQuantity, int maximumQuantity, double discount)
+	: IDiscountStrategy
 {
+	public double MinimumAmount { get; } = minimumAmount;
+	public double MaximumAmount { get; } = maximumAmount;
+	public int MinimumQuantity { get; } = minimumQuantity;
+	public int MaximumQuantity { get; } = maximumQuantity;
+	public double Discount { get; } = discount;
+
 	public bool Apply(Basket basket)
 	{
-		if (basket.Amount <= 1000 && basket.QtyOfItems() <= 2)
-		{
-			basket.Subtract(basket.Amount * 0.02);
-			return true;
-		}
+		int qtyItens = basket.QtyOfItems();
+		double amount = basket.Amount;
 
-		else if (basket.Amount > 3000 && basket.QtyOfItems() < 5 && basket.QtyOfItems() > 2)
-		{
-			basket.Subtract(basket.Amount * 0.05);
-			return true;
-		}
+		bool withinItensLimit = qtyItens >= MinimumQuantity && qtyItens <= MaximumQuantity;
+		bool withinAmountLimit = amount >= MinimumAmount && amount <= MaximumAmount;
 
-		else if (basket.Amount > 3000 && basket.QtyOfItems() >= 5)
+		if (withinItensLimit && withinAmountLimit)
 		{
-			basket.Subtract(basket.Amount * 0.06);
+			basket.Subtract(basket.Amount * Discount);
 			return true;
 		}
 
