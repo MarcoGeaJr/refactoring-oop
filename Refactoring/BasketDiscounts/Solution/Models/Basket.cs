@@ -17,13 +17,23 @@ public class Basket
 	{
 		foreach (Item item in _items)
 		{
-			amount += item.GetTotalPrice();
+			Amount += item.GetTotalPrice();
 		}
 	}
 
-	public void Subtract(double amount)
+	/// <summary>
+	/// Apply a discount percentage to Amount
+	/// </summary>
+	/// <param name="discount">Percentagem of discount</param>
+	/// <exception cref="ArgumentOutOfRangeException">If discount less than 0 or greater than 1.</exception>
+	public void ApplyDiscountPercentage(double discount)
 	{
-		Amount -= amount;
+		if (discount < 0 || discount > 1)
+		{
+			throw new ArgumentOutOfRangeException(nameof(discount));
+		}
+
+		Amount -= (Amount * discount);
 	}
 
 	public int QtyOfItems()
