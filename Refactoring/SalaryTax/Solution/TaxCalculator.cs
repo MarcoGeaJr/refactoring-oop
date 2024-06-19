@@ -11,7 +11,7 @@ public class TaxCalculator
 
 		if (Role.DBA.Equals(employee.Role) || Role.TESTER.Equals(employee.Role))
 		{
-			return new FifteenOrTwentyFivePercent().Calculate(employee);
+			return new FifteenOrTwentyFivePercentCalculationStrategy().Calculate(employee);
 		}
 
 		// ... and many more ...

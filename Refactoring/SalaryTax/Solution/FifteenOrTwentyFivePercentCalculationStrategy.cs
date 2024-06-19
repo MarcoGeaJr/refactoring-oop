@@ -1,6 +1,6 @@
 ﻿namespace Refactoring.SalaryTax.Solution;
 
-public sealed class FifteenOrTwentyFivePercent : ITaxCalculationStrategy
+public sealed class FifteenOrTwentyFivePercentCalculationStrategy : ITaxCalculationStrategy
 {
 	public double Calculate(Employee employee)
 	{
