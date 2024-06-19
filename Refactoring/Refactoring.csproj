@@ -15,6 +15,10 @@
     <None Remove="SalaryTax\Problem\Enumeration.cs~RF24364a27.TMP" />
     <None Remove="SalaryTax\Problem\Role.cs~RF24391a3e.TMP" />
     <None Remove="SalaryTax\Solution\Employee.cs~RF24b59cc1.TMP" />
+    <None Remove="SalaryTax\Solution\TaxCalculationResolver.cs~RF24c51e0e.TMP" />
+    <None Remove="SalaryTax\Solution\TaxCalculator.cs~RF24ba25c4.TMP" />
+    <None Remove="SalaryTax\Solution\TaxCalculator.cs~RF24bb2756.TMP" />
+    <None Remove="SalaryTax\Solution\TaxCalculator.cs~RF24c5f880.TMP" />
   </ItemGroup>
 
 </Project>
