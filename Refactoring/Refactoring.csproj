@@ -16,8 +16,4 @@
     <None Remove="SalaryTax\Problem\Role.cs~RF24391a3e.TMP" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="SalaryTax\Solution\" />
-  </ItemGroup>
-
 </Project>
