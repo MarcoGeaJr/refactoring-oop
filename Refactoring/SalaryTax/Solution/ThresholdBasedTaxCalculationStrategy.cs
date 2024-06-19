@@ -8,6 +8,17 @@ public class ThresholdBasedTaxCalculationStrategy(double threshold, double above
 
 	public double Calculate(Employee employee)
 	{
-		return employee.BaseSalary > Threshold ? employee.BaseSalary * AboveTax : employee.BaseSalary * BelowTax;
+		return IsAboveThreshold(employee)
+			? GetAboveThresholdSalaryTax(employee)
+			: GetBelowThresholdSalaryTax(employee);
 	}
+
+	private bool IsAboveThreshold(Employee employee)
+		=> employee.BaseSalary > Threshold;
+
+	private double GetAboveThresholdSalaryTax(Employee employee)
+		=> employee.BaseSalary * AboveTax;
+
+	private double GetBelowThresholdSalaryTax(Employee employee)
+		=> employee.BaseSalary * BelowTax;
 }
