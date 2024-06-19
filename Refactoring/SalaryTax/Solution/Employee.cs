@@ -16,7 +16,4 @@ public class Employee
 	public Role Role { get; private set; }
 	public DateTime AdmissionDate { get; private set; }
 	public double BaseSalary { get; private set; }
-
-	public double GetSalaryTax()
-		=> Role.TaxCalculationStrategy.Calculate(this);
 }
