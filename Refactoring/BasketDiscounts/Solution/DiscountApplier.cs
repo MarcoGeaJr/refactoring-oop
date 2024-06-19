@@ -11,8 +11,11 @@ public class DiscountApplier(
 	{
 		foreach (var discount in _discountStrategies)
 		{
-			if (discount.Apply(basket))
+			if (discount.ShoulBeApplied(basket))
+			{
+				discount.Apply(basket);
 				break;
+			}
 		}
 	}
 }

@@ -13,7 +13,7 @@ public class DiscountPerAmount(double minimumAmount, double maximumAmount, int m
 
 	public void Apply(Basket basket)
 	{
-		basket.Subtract(basket.Amount * Discount);
+		basket.ApplyDiscountPercentage(Discount);
 	}
 
 	public bool ShoulBeApplied(Basket basket)

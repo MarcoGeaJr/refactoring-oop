@@ -9,7 +9,7 @@ public class DiscountPerProduct(List<string> products, double discount) : IDisco
 
 	public void Apply(Basket basket)
 	{
-		basket.Subtract(basket.Amount * Discount);
+		basket.ApplyDiscountPercentage(Discount);
 	}
 
 	public bool ShoulBeApplied(Basket basket)

@@ -17,7 +17,7 @@ public class Basket
 	{
 		foreach (Item item in _items)
 		{
-			amount += item.GetTotalPrice();
+			Amount += item.GetTotalPrice();
 		}
 	}
 
