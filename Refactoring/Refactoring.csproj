@@ -14,6 +14,7 @@
     <None Remove="InvoiceGeneration\Problem\Invoice.cs~RF281f6338.TMP" />
     <None Remove="InvoiceGeneration\Problem\InvoiceGenerator.cs~RF282575f7.TMP" />
     <None Remove="InvoiceGeneration\Solution\IInvoiceGeneratedAction.cs~RF294bf5ff.TMP" />
+    <None Remove="InvoiceGeneration\Solution\InvoiceGenerator.cs~RF29524896.TMP" />
     <None Remove="SalaryTax\Problem\Employee.cs~RF243abdcd.TMP" />
     <None Remove="SalaryTax\Problem\Enumeration.cs~RF24364a27.TMP" />
     <None Remove="SalaryTax\Problem\Role.cs~RF24391a3e.TMP" />
