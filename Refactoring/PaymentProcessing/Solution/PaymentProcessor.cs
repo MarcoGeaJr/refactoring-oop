@@ -6,8 +6,8 @@ public class PaymentProcessor
 	{
 		foreach (Installment installment in installments)
 		{
-			Payment payment = new Payment(installment.Amount);
-			billing.Payments.Add(payment);
+			Payment payment = new(installment.Amount);
+			billing.AddPayment(payment);
 		}
 	}
 }
