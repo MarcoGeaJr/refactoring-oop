@@ -1,6 +1,6 @@
 ﻿namespace Refactoring.Puzzle.Solution;
 
-public class PuzzleRunner(PuzzleSolver solver, SysOutPuzzzleOutput puzzleOutput)
+public class PuzzleRunner(PuzzleSolver solver, IPuzzleOutput puzzleOutput)
 {
 	public void Run(int input, int output)
 	{

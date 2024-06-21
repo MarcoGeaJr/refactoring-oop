@@ -1,6 +1,6 @@
 ﻿namespace Refactoring.Puzzle.Solution;
 
-public class SysOutPuzzzleOutput
+public class SysOutPuzzzleOutput : IPuzzleOutput
 {
 	public void FormatOutput(Number solution)
 	{
