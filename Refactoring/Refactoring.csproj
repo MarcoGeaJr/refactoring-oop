@@ -17,6 +17,7 @@
     <None Remove="InvoiceGeneration\Solution\InvoiceGenerator.cs~RF29524896.TMP" />
     <None Remove="PaymentProcessing\Solution\Billing.cs~RF29864e46.TMP" />
     <None Remove="PaymentProcessing\Solution\Billing.cs~RF2988bcd5.TMP" />
+    <None Remove="Puzzle\Solution\IPuzzleOutput.cs~RF2aeb279b.TMP" />
     <None Remove="SalaryTax\Problem\Employee.cs~RF243abdcd.TMP" />
     <None Remove="SalaryTax\Problem\Enumeration.cs~RF24364a27.TMP" />
     <None Remove="SalaryTax\Problem\Role.cs~RF24391a3e.TMP" />

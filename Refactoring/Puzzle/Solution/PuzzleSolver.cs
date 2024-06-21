@@ -1,6 +1,6 @@
 ﻿namespace Refactoring.Puzzle.Solution;
 
-public class Puzzle
+public class PuzzleSolver
 {
 	public int Input { get; private set; }
 	public int Output { get; private set; }
@@ -8,18 +8,18 @@ public class Puzzle
 	private List<Number> _queue;
 	private HashSet<int> _visited;
 
-	public Puzzle()
+	public PuzzleSolver()
 	{
 		_queue = [];
 		_visited = [];
 	}
 
-	public void GeneratePath(int input, int output)
+	public Number GeneratePath(int input, int output)
 	{
 		Input = input;
 		Output = output;
 
-		FormatOutput(SearchForSolution());
+		return SearchForSolution();
 	}
 
 	private Number SearchForSolution()
@@ -74,17 +74,6 @@ public class Puzzle
 				}
 			}
 		}
-	}
-
-	private void FormatOutput(Number solution)
-	{
-		string output = "";
-		while (solution != null)
-		{
-			output = solution.Value + " " + output;
-			solution = solution.Parent;
-		}
-		Console.WriteLine(output);
 	}
 
 	private Number MultiplyByTwo(Number number)
